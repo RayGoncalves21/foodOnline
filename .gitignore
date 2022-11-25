@@ -128,7 +128,7 @@ _local_settings.py
 gunicorn-error-log
 db.sqlite3
 db copy.sqlite3
-static/
+#static/
 
 # add again foc course purpose
 !db.sqlite3
