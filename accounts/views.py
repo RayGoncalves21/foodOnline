@@ -13,10 +13,10 @@ def registerUser(request):
         form = UserForm(request.POST)
         if form.is_valid():
             # Create the user using the form
-            #password = form.cleaned_data['password']
-            #user = form.save(commit=False)
+            # password = form.cleaned_data['password']
+            # user = form.save(commit=False)
             # user.set_password(password)
-            #user.role = User.CUSTOMER
+            # user.role = User.CUSTOMER
             # user.save()
 
             # Create the user using create_user method
@@ -33,7 +33,7 @@ def registerUser(request):
                                                  password=password)
             user.role = User.CUSTOMER
             user.save()
-            messages.error(request, 'Register Sucessfully')
+            messages.success(request, 'Register Sucessfully')
 
             return redirect('registerUser')
         else:
@@ -45,3 +45,7 @@ def registerUser(request):
         'form': form
     }
     return render(request, 'accounts/registerUser.html', context)
+
+
+def registerVendor(request):
+    return render(request, 'accounts/registerVendor.html',)
