@@ -1,0 +1,14 @@
+{% autoescape off %}
+
+    Hi {{user.first_name}},
+    {% if is_aproved %}   
+    congratulations, your restaurante has been approved by uor admin team. --foodonline
+    login here: http://127.0.0.1:8000/accounts/login/
+    {% else %}
+    Sorry, we are not eligible for publish in marketplace. For more details please 
+    contat the suport    
+    {% endif %}
+
+
+
+{% endautoescape %}
